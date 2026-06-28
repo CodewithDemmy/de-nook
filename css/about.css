@@ -1,0 +1,199 @@
+/* =========================================================
+   DE NOOK — About Page Styles
+   ========================================================= */
+
+/* ---------- Story + timeline ---------- */
+.story {
+  background: var(--cream);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.story-text p {
+  color: rgba(28, 37, 33, 0.75);
+  margin-bottom: 1rem;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline {
+  border-left: 2px solid var(--sage);
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.43rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 0 4px var(--cream);
+}
+
+.timeline-year {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-item h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-item p {
+  font-size: 0.92rem;
+  color: rgba(28, 37, 33, 0.7);
+}
+
+@media (max-width: 900px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ---------- Values ---------- */
+.values {
+  background: var(--forest-light);
+  color: var(--cream);
+}
+
+.values .section-head p {
+  color: rgba(251, 246, 236, 0.7);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: rgba(251, 246, 236, 0.04);
+  border: 1px solid rgba(251, 246, 236, 0.1);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+}
+
+.value-card .icon {
+  color: var(--gold);
+}
+
+.value-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.value-card p {
+  font-size: 0.92rem;
+  color: rgba(251, 246, 236, 0.7);
+}
+
+@media (max-width: 980px) {
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Team ---------- */
+.team {
+  background: var(--cream);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.team-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--forest);
+}
+
+.team-avatar.gold { background: var(--gold); }
+.team-avatar.coral { background: var(--coral-soft); }
+.team-avatar.sage { background: var(--sage); }
+
+.team-card h3 {
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.team-card .bio {
+  font-size: 0.92rem;
+  color: rgba(28, 37, 33, 0.7);
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- Icon fix (SVGs need explicit size) ---------- */
+.value-card .icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--gold);
+}

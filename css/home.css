@@ -1,0 +1,393 @@
+/* =========================================================
+   DE NOOK — Home Page Styles
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--forest);
+  color: var(--cream);
+  padding: 4.5rem 0 5.5rem;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  margin-bottom: 1.25rem;
+}
+
+.hero-content .eyebrow {
+  color: var(--gold);
+}
+
+.hero-sub {
+  color: rgba(251, 246, 236, 0.78);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn-outline {
+  border-color: rgba(251, 246, 236, 0.35);
+}
+
+/* ---------- Desk map (signature element) ---------- */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.desk-map {
+  background: var(--forest-light);
+  border: 1px solid rgba(251, 246, 236, 0.1);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.desk-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.25rem;
+}
+
+.desk-map-header h3 {
+  font-size: 1rem;
+  color: var(--cream);
+}
+
+.desk-map-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+.desk-zone {
+  margin-bottom: 1.25rem;
+}
+
+.desk-zone:last-child {
+  margin-bottom: 0;
+}
+
+.desk-zone-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(251, 246, 236, 0.5);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.desk-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.4rem;
+}
+
+.desk-grid.rooms {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.desk {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: rgba(251, 246, 236, 0.08);
+  border: 1px solid rgba(251, 246, 236, 0.12);
+  transition: background 0.6s ease, border-color 0.6s ease;
+}
+
+.desk.available {
+  background: var(--gold);
+  border-color: var(--gold);
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+.desk.occupied {
+  background: var(--sage);
+  border-color: var(--sage);
+  opacity: 0.35;
+}
+
+.desk.reserved {
+  background: transparent;
+  border-color: var(--coral);
+  border-style: dashed;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.desk-legend {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0 0.25rem;
+}
+
+.desk-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(28, 37, 33, 0.7);
+}
+
+.desk-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.desk-legend-swatch.available { background: var(--gold); }
+.desk-legend-swatch.occupied { background: var(--sage); }
+.desk-legend-swatch.reserved { background: transparent; border: 1px dashed var(--coral); }
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .desk-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .desk-grid.rooms {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Highlights ---------- */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: var(--cream-dim);
+  border-radius: var(--radius);
+  padding: 2rem 1.75rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(20, 52, 42, 0.08);
+}
+
+.highlight-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  color: var(--coral);
+}
+
+.highlight-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.highlight-card p {
+  font-size: 0.92rem;
+  color: rgba(28, 37, 33, 0.7);
+}
+
+@media (max-width: 980px) {
+  .highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Spaces preview ---------- */
+.spaces-preview {
+  background: var(--forest-light);
+  color: var(--cream);
+}
+
+.spaces-preview .section-head .eyebrow {
+  color: var(--gold);
+}
+
+.spaces-preview .section-head p {
+  color: rgba(251, 246, 236, 0.7);
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.space-card {
+  background: rgba(251, 246, 236, 0.04);
+  border: 1px solid rgba(251, 246, 236, 0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.space-card .eyebrow {
+  color: var(--gold);
+}
+
+.space-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.space-card p {
+  color: rgba(251, 246, 236, 0.7);
+  font-size: 0.92rem;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.space-card .text-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.space-card .text-link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 980px) {
+  .spaces-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Membership preview ---------- */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.plan-card {
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card.featured {
+  border-color: var(--coral);
+  background: var(--cream-dim);
+  position: relative;
+}
+
+.plan-card .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.plan-price span {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(28, 37, 33, 0.6);
+}
+
+.plan-card p.plan-desc {
+  font-size: 0.92rem;
+  color: rgba(28, 37, 33, 0.7);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+@media (max-width: 980px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.membership-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ---------- Community / testimonials ---------- */
+.community {
+  background: var(--cream-dim);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  color: rgba(28, 37, 33, 0.6);
+}
+
+.testimonial-author strong {
+  color: var(--ink);
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Desk — De Nook</title>
+  <meta name="description" content="Reserve your hot desk, studio or meeting room at De Nook, Yaba Lagos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">De <span>Nook</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="spaces.html">Spaces</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-primary active">Book a Desk</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Page header ===== -->
+  <section class="page-header">
+    <div class="container">
+      <p class="eyebrow">Booking</p>
+      <h1>Reserve your spot at De Nook.</h1>
+      <p>Pick a space, choose your date and time, and we'll have it ready for you.</p>
+    </div>
+  </section>
+
+  <!-- ===== Booking form ===== -->
+  <section class="booking-section">
+    <div class="container">
+
+      <!-- Success state (hidden by default) -->
+      <div class="booking-success" id="bookingSuccess">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+        </div>
+        <h2>You're booked in!</h2>
+        <p>A confirmation will be sent to your email. See you at De Nook.</p>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+
+      <div class="booking-layout" id="bookingLayout">
+
+        <!-- Form -->
+        <form class="booking-form" id="bookingForm" novalidate>
+
+          <!-- 1. Space type -->
+          <div class="form-section">
+            <span class="form-section-label">1. What are you booking?</span>
+            <div class="space-type-grid">
+
+              <div class="space-type-option">
+                <input type="radio" name="space" id="space-hotdesk" value="Hot Desk" data-price="5000" checked />
+                <label for="space-hotdesk">
+                  <span class="space-type-name">Hot Desk</span>
+                  <span class="space-type-price">₦5,000 / day</span>
+                </label>
+              </div>
+
+              <div class="space-type-option">
+                <input type="radio" name="space" id="space-studio" value="Private Studio" data-price="250000" />
+                <label for="space-studio">
+                  <span class="space-type-name">Private Studio</span>
+                  <span class="space-type-price">₦250,000 / month</span>
+                </label>
+              </div>
+
+              <div class="space-type-option">
+                <input type="radio" name="space" id="space-annex" value="The Annex (meeting room)" data-price="7500" />
+                <label for="space-annex">
+                  <span class="space-type-name">The Annex</span>
+                  <span class="space-type-price">₦7,500 / hr (members)</span>
+                </label>
+              </div>
+
+              <div class="space-type-option">
+                <input type="radio" name="space" id="space-boardroom" value="The Boardroom" data-price="7500" />
+                <label for="space-boardroom">
+                  <span class="space-type-name">The Boardroom</span>
+                  <span class="space-type-price">₦7,500 / hr (members)</span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2. Date & time -->
+          <div class="form-section">
+            <span class="form-section-label">2. When do you need it?</span>
+            <div class="date-time-row">
+              <div class="field">
+                <label for="bookDate">Date</label>
+                <input type="date" id="bookDate" name="date" required />
+              </div>
+              <div class="field">
+                <label for="bookTime">Start time</label>
+                <select id="bookTime" name="time" required>
+                  <option value="">Select a time</option>
+                  <option value="07:00">7:00 AM</option>
+                  <option value="08:00">8:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Duration -->
+          <div class="form-section">
+            <span class="form-section-label">3. How long?</span>
+            <div class="field">
+              <label for="bookDuration">Duration</label>
+              <select id="bookDuration" name="duration" required>
+                <option value="">Select duration</option>
+                <option value="1 hour">1 hour</option>
+                <option value="2 hours">2 hours</option>
+                <option value="3 hours">3 hours</option>
+                <option value="Half day (4 hrs)">Half day (4 hrs)</option>
+                <option value="Full day">Full day</option>
+                <option value="1 week">1 week</option>
+                <option value="1 month">1 month</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 4. Your details -->
+          <div class="form-section">
+            <span class="form-section-label">4. About you</span>
+            <div class="person-row">
+              <div class="field">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Adaeze" required />
+              </div>
+              <div class="field">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Nwosu" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="adaeze@email.com" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" />
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything we should know? <span style="font-weight:400;color:rgba(28,37,33,0.5)">(optional)</span></label>
+              <textarea id="notes" name="notes" placeholder="e.g. I'll need a monitor, two guests joining me..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Confirm Booking</button>
+        </form>
+
+        <!-- Sidebar summary -->
+        <aside class="booking-sidebar">
+          <div class="summary-card">
+            <h3>Your booking summary</h3>
+
+            <div class="summary-row">
+              <span class="summary-label">Space</span>
+              <span class="summary-value" id="sumSpace">Hot Desk</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Date</span>
+              <span class="summary-value placeholder" id="sumDate">Not selected</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Time</span>
+              <span class="summary-value placeholder" id="sumTime">Not selected</span>
+            </div>
+
+            <div class="summary-row">
+              <span class="summary-label">Duration</span>
+              <span class="summary-value placeholder" id="sumDuration">Not selected</span>
+            </div>
+
+            <div class="summary-row summary-total">
+              <span class="summary-label">Est. cost</span>
+              <span class="summary-value" id="sumCost">₦5,000</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h4>Good to know</h4>
+            <ul>
+              <li>Confirmation is sent by email within minutes</li>
+              <li>Cancel or reschedule up to 24 hrs before</li>
+              <li>Check-in at the front desk on arrival</li>
+              <li>Members get discounted meeting room rates</li>
+              <li>Need something custom? <a href="contact.html" style="color:var(--coral)">Message us</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div><!-- /booking-layout -->
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">De <span>Nook</span></a>
+          <p>A creative co-working space in Yaba, Lagos — built for freelancers, founders and small teams who want to do their best work.</p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="spaces.html">Spaces</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="booking.html">Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Visit</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Find Us</h4>
+          <address>12 Commercial Avenue, Yaba, Lagos</address>
+          <p>Open daily, 7am – 10pm</p>
+          <p>hello@denook.co</p>
+          <p>+234 801 234 5678</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="X (Twitter)">X</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 De Nook. All rights reserved.</p>
+        <p>Made in Yaba, Lagos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

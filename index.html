@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Nook — Creative Co-Working in Yaba, Lagos</title>
+  <meta name="description" content="De Nook is a creative co-working space in Yaba, Lagos offering hot desks, private studios, meeting rooms and a community of makers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">De <span>Nook</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="spaces.html">Spaces</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="btn btn-primary">Book a Desk</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow">Co-Working · Yaba, Lagos</p>
+        <h1>Your corner of Lagos to think, build, and grow.</h1>
+        <p class="hero-sub">
+          De Nook is a creative co-working space for freelancers, founders and small
+          teams — flexible desks, private studios and a community that actually shows up.
+        </p>
+        <div class="hero-actions">
+          <a href="booking.html" class="btn btn-primary">Book a Desk</a>
+          <a href="spaces.html" class="btn btn-outline">Take a Look Around</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="desk-map" id="deskMap">
+          <div class="desk-map-header">
+            <h3>Today at De Nook</h3>
+            <span class="desk-map-count">— of — desks free today</span>
+          </div>
+
+          <div class="desk-zone">
+            <span class="desk-zone-label">Hot Desks</span>
+            <div class="desk-grid">
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+              <div class="desk reserved"></div>
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+            </div>
+          </div>
+
+          <div class="desk-zone">
+            <span class="desk-zone-label">Studio Row</span>
+            <div class="desk-grid">
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+              <div class="desk reserved"></div>
+              <div class="desk available"></div>
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk available"></div>
+            </div>
+          </div>
+
+          <div class="desk-zone">
+            <span class="desk-zone-label">Meeting Rooms</span>
+            <div class="desk-grid rooms">
+              <div class="desk available"></div>
+              <div class="desk occupied"></div>
+              <div class="desk reserved"></div>
+              <div class="desk available"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="desk-legend">
+          <span class="desk-legend-item"><span class="desk-legend-swatch available"></span> Available</span>
+          <span class="desk-legend-item"><span class="desk-legend-swatch occupied"></span> In use</span>
+          <span class="desk-legend-item"><span class="desk-legend-swatch reserved"></span> Reserved</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Highlights ===== -->
+  <section class="highlights">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Why De Nook</p>
+        <h2>Everything you need, nothing you don't.</h2>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 8.5a15.5 15.5 0 0 1 20 0" />
+            <path d="M5 12a10.5 10.5 0 0 1 14 0" />
+            <path d="M8.5 15.5a5.5 5.5 0 0 1 7 0" />
+            <circle cx="12" cy="19" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <h3>Fibre that doesn't blink</h3>
+          <p>Dedicated fibre internet with full backup power, so a blackout never means a deadline missed.</p>
+        </div>
+
+        <div class="highlight-card">
+          <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+          <h3>Open 9am – 7pm, daily</h3>
+          <p>Early birds, night owls and everyone in between — De Nook is open every day of the week.</p>
+        </div>
+
+        <div class="highlight-card">
+          <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 9h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z" />
+            <path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17" />
+            <path d="M8 3v2" />
+            <path d="M11 3v2" />
+          </svg>
+          <h3>Brew &amp; bites on tap</h3>
+          <p>Coffee, tea and snacks included — plus a kitchen stocked for the long work days.</p>
+        </div>
+
+        <div class="highlight-card">
+          <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="17" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M8 2v4" />
+            <path d="M16 2v4" />
+            <path d="M8 13h2" />
+            <path d="M14 13h2" />
+            <path d="M8 17h2" />
+          </svg>
+          <h3>A calendar full of people</h3>
+          <p>Workshops, demo days and meetups that plug you into Lagos's creative and tech scene.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Spaces preview ===== -->
+  <section class="spaces-preview">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Find Your Spot</p>
+        <h2>A space for however you work.</h2>
+        <p>From a single hot desk to a private studio for your whole team — every space is built to help you focus.</p>
+      </div>
+
+      <div class="spaces-grid">
+        <div class="space-card">
+          <p class="eyebrow">Hot Desks</p>
+          <h3>Pick a spot, plug in</h3>
+          <p>Open-plan desks on the main floor — perfect for freelancers and remote workers who want flexibility without commitment.</p>
+          <a href="spaces.html" class="text-link">Explore Hot Desks →</a>
+        </div>
+
+        <div class="space-card">
+          <p class="eyebrow">Private Studios</p>
+          <h3>Your own four walls</h3>
+          <p>Lockable studios for small teams who need a quiet, dedicated base — with room to grow as you do.</p>
+          <a href="spaces.html" class="text-link">Explore Studios →</a>
+        </div>
+
+        <div class="space-card">
+          <p class="eyebrow">Meeting Rooms</p>
+          <h3>Bring people together</h3>
+          <p>Bookable rooms fitted with screens and whiteboards, for client meetings, interviews and team check-ins.</p>
+          <a href="spaces.html" class="text-link">Explore Meeting Rooms →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Membership preview ===== -->
+  <section class="membership">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Membership</p>
+        <h2>Plans that flex with you.</h2>
+        <p>Drop in for a day or settle in for the month — every plan includes Wi-Fi, power, coffee and access to the community calendar.</p>
+      </div>
+
+      <div class="membership-grid">
+        <div class="plan-card">
+          <p class="eyebrow">Day Pass</p>
+          <p class="plan-price">₦5,000 <span>/ day</span></p>
+          <p class="plan-desc">Drop in whenever, plug in and get to work. No commitment, no paperwork.</p>
+        </div>
+
+        <div class="plan-card featured">
+          <p class="eyebrow">Flex Membership</p>
+          <p class="plan-price">₦45,000 <span>/ month</span></p>
+          <p class="plan-desc">Hot desk access any day, 8am–7pm, plus discounted meeting room hours.</p>
+        </div>
+
+        <div class="plan-card">
+          <p class="eyebrow">Resident Desk</p>
+          <p class="plan-price">₦85,000 <span>/ month</span></p>
+          <p class="plan-desc">A dedicated desk that's yours all month — storage included.</p>
+        </div>
+      </div>
+
+      <div class="membership-cta">
+        <a href="membership.html" class="btn btn-primary">Compare All Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Community / testimonials ===== -->
+  <section class="community">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The Community</p>
+        <h2>People who get things done here.</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"I moved my whole workflow to De Nook after my second week. The Wi-Fi alone is worth it — but the people make it home."</p>
+          <p class="testimonial-author"><strong>Tobi Adeyemi</strong>Product Designer</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"We ran our first investor meeting from the Boardroom and signed our lease the same week. Good energy, good Wi-Fi, good coffee."</p>
+          <p class="testimonial-author"><strong>Funmi Okechukwu</strong>Founder, ShelfLife</p>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"As a freelancer, the Day Pass is perfect for client meeting days. Everything just works, every time."</p>
+          <p class="testimonial-author"><strong>Chidi Obi</strong>Freelance Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA banner ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <p class="eyebrow">Ready When You Are</p>
+      <h2>Come find your nook.</h2>
+      <div class="cta-banner-actions">
+        <a href="booking.html" class="btn btn-primary">Book a Desk</a>
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">De <span>Nook</span></a>
+          <p>A creative co-working space in Ojodu, Lagos — built for freelancers, founders and small teams who want to do their best work.</p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="spaces.html">Spaces</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="booking.html">Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Visit</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Find Us</h4>
+          <address>12 Commercial Avenue, Ojodu, Lagos</address>
+          <p>Open daily, 9am – 7pm</p>
+          <p>hello@denook.co</p>
+          <p>+234 8166446928</p>
+
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="X (Twitter)">X</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 De Nook. All rights reserved.</p>
+        <p>Developed by Demmy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

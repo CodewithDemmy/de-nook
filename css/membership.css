@@ -1,0 +1,132 @@
+/* =========================================================
+   DE NOOK — Membership Page Styles
+   ========================================================= */
+
+/* ---------- Comparison table ---------- */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--sage);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background: var(--cream);
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(28, 37, 33, 0.08);
+}
+
+.compare-table thead th {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  background: var(--forest);
+  color: var(--cream);
+  vertical-align: top;
+}
+
+.compare-table thead th.featured-col {
+  background: var(--forest-light);
+}
+
+.compare-table thead th span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--gold);
+  margin-top: 0.35rem;
+  font-weight: 400;
+}
+
+.compare-table tbody td.featured-col {
+  background: var(--cream-dim);
+}
+
+.compare-table tbody th {
+  font-weight: 600;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.compare-table tbody tr:last-child td,
+.compare-table tbody tr:last-child th {
+  border-bottom: none;
+}
+
+.compare-table .yes {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.compare-table .no {
+  color: rgba(28, 37, 33, 0.3);
+}
+
+.table-note {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: rgba(28, 37, 33, 0.5);
+  margin-top: 1rem;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  background: var(--cream-dim);
+}
+
+.faq-list {
+  max-width: 760px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(28, 37, 33, 0.1);
+  padding: 1.25rem 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(28, 37, 33, 0.1);
+}
+
+.faq-item summary {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--font-mono);
+  color: var(--coral);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-item p {
+  margin-top: 0.85rem;
+  color: rgba(28, 37, 33, 0.7);
+  font-size: 0.95rem;
+  max-width: 620px;
+}

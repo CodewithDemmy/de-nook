@@ -1,0 +1,119 @@
+/* =========================================================
+   DE NOOK — Spaces Page Styles
+   ========================================================= */
+
+.space-section.alt {
+  background: var(--cream-dim);
+}
+
+.space-row {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.space-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.space-text,
+.space-visual {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- Floor plan visual ---------- */
+.floor-plan {
+  background: var(--forest);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.floor-plan-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.floor-plan svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Text content ---------- */
+.space-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.space-meta-item .meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(28, 37, 33, 0.5);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.space-meta-item .meta-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.space-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+}
+
+.space-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.space-features li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  color: var(--coral);
+}
+
+.space-price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.space-price span {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgba(28, 37, 33, 0.6);
+}
+
+@media (max-width: 900px) {
+  .space-row,
+  .space-row.reverse {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .space-meta {
+    gap: 1.5rem;
+  }
+}
